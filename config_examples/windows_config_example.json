@@ -1,0 +1,273 @@
+{
+  "rules": [
+    {
+      "outbound": "currentSelected",
+      "name": "Ⓜ️ Bing",
+      "switch": true,
+      "or": true,
+      "rule_set_build_in": [
+        "geoip:bing",
+        "geosite:bing"
+      ]
+    },
+    {
+      "outbound": "currentSelected",
+      "name": "📸 Instagram",
+      "switch": true,
+      "or": true,
+      "rule_set_build_in": [
+        "geosite:instagram"
+      ]
+    },
+    {
+      "outbound": "currentSelected",
+      "name": "💬 OpenAI",
+      "switch": true,
+      "or": true,
+      "rule_set_build_in": [
+        "geoip:openai",
+        "geosite:openai"
+      ]
+    },
+    {
+      "outbound": "currentSelected",
+      "name": "proxy",
+      "switch": true,
+      "or": true,
+      "domain_suffix": [
+        "www.speedtest.net",
+        "www.wildberries.ru",
+        "server.codeium.com",
+        "www.jenv.be",
+        ".anthropic.com",
+        ".youtrack.cloud",
+        "www.wondera.ai",
+        "www.iana.org",
+        ".iana.org",
+        ".cloudflare.com",
+        "www.cloudflare.com",
+        ".jetbrains.com",
+        "grok.com"
+      ],
+      "domain": [
+        "instagram.com",
+        "movielab.one",
+        "gemini.google.com",
+        "aniboom.one",
+        "statlocker.gg",
+        "medium.com",
+        "anthropic.com",
+        "tiermaker.com",
+        "manus.im",
+        "poe2.ninja",
+        "wondera.ai",
+        "wildberries.ru",
+        "jetbrains.com",
+        "rutracker.org",
+        "iana.org",
+        "claude.ai",
+        "cloudflare.com",
+        "meta.com",
+        "youtrack.cloud",
+        "facebook.com",
+        "copilot.microsoft.com",
+        "jenv.be",
+        "openai.com",
+        "codeium.com",
+        "sora.com",
+        "p.lumex.pw",
+        "ads.google.com",
+        "speedtest.net",
+        "x.com",
+        "inference.codeium.com",
+        "unleash.codeium.com",
+        "steamdb.info",
+        "www.keengamer.com",
+        "lh3.googleusercontent.com",
+        "api.individual.githubcopilot.com",
+        "api.githubcopilot.com",
+        "api.github.com",
+        "windsurf.com",
+        "api.movielab.guru",
+        "api.manus.im",
+        "vocalremover.org",
+        "miro.medium.com",
+        "api.spotify.com"
+      ],
+      "rule_set_build_in": [
+        "geosite:ookla-speedtest-ads",
+        "geosite:ookla-speedtest-ads@ads",
+        "geosite:ookla-speedtest",
+        "geosite:ookla-speedtest@ads",
+        "geosite:speedtest",
+        "geosite:speedtest@ads",
+        "acl:Twitter",
+        "geoip:twitter",
+        "geosite:twitter",
+        "geosite:x",
+        "geosite:xai",
+        "geosite:google-gemini",
+        "acl:Gemini",
+        "geosite:cloudflare",
+        "geoip:cloudflare",
+        "geosite:cloudflare-cn",
+        "geosite:cloudflare-cn@cn",
+        "geosite:cloudflare-ipfs",
+        "geosite:cloudflare@cn",
+        "geosite:youtube",
+        "acl:YouTube",
+        "geosite:jetbrains-ai",
+        "geosite:jetbrains",
+        "acl:JetBrains"
+      ],
+      "process_name": [
+        "ChatGPT.exe",
+        "idea64.exe",
+        "claude.exe",
+        "msedge.exe"
+      ],
+      "process_path": [
+        "C:\\Users\\survk\\AppData\\Local\\Programs\\Windsurf\\Windsurf.exe"
+      ]
+    },
+    {
+      "outbound": "direct",
+      "name": "direct",
+      "switch": true,
+      "or": true,
+      "domain_suffix": [
+        ".aeza.net"
+      ],
+      "domain": [
+        "go.microsoft.com",
+        "animego.me",
+        "discord.com",
+        "onecompiler.com"
+      ],
+      "rule_set_build_in": [
+        "geosite:twitch",
+        "geosite:yandex",
+        "acl:Whatsapp",
+        "geosite:microsoft",
+        "geoip:microsoft",
+        "acl:Microsoft"
+      ],
+      "process_name": [
+        "updater.exe",
+        "project8.exe",
+        "steam.exe",
+        "discord.exe"
+      ]
+    },
+    {
+      "outbound": "direct",
+      "name": "Youtube",
+      "switch": true,
+      "or": true,
+      "domain_suffix": [
+        ".youtube.com"
+      ],
+      "domain": [
+        "youtube.com"
+      ],
+      "rule_set_build_in": [
+        "geosite:youtube",
+        "acl:YouTube",
+        "acl:YouTubeMusic"
+      ]
+    },
+    {
+      "outbound": "currentSelected",
+      "name": "proxy6.net",
+      "switch": true,
+      "or": true,
+      "domain": [
+        "proxy6.net",
+        "gemini.google.com",
+        "maps.googleapis.com",
+        "play.google.com",
+        "mtalk.google.com"
+      ]
+    },
+    {
+      "outbound": "direct",
+      "name": "Telegram",
+      "switch": true,
+      "or": true,
+      "domain_suffix": [
+        "web.telegram.org"
+      ],
+      "domain": [
+        "t.me",
+        "telegram.org"
+      ],
+      "rule_set_build_in": [
+        "geoip:telegram",
+        "acl:Telegram",
+        "geosite:telegram"
+      ]
+    },
+    {
+      "outbound": "block",
+      "name": "🛑 Adblock",
+      "switch": true,
+      "or": true,
+      "rule_set_build_in": [
+        "acl:BanAD",
+        "geosite:category-ads"
+      ]
+    },
+    {
+      "outbound": "block",
+      "name": "🍃 AdblockPlus",
+      "switch": true,
+      "or": true,
+      "rule_set_build_in": [
+        "acl:BanProgramAD",
+        "acl:BanADCompany"
+      ]
+    },
+    {
+      "outbound": "block",
+      "name": "🛑 malware",
+      "switch": true,
+      "or": true,
+      "rule_set_build_in": [
+        "geosite:malware",
+        "geoip:malware",
+        "geoip:phishing",
+        "geosite:phishing",
+        "geosite:cryptominers"
+      ]
+    },
+    {
+      "outbound": "direct",
+      "name": "🎮 Game",
+      "switch": true,
+      "or": true,
+      "rule_set_build_in": [
+        "acl:Epic",
+        "acl:Origin",
+        "acl:Sony",
+        "acl:Steam",
+        "acl:Nintendo"
+      ],
+      "process_name": [
+        "steam.exe"
+      ]
+    },
+    {
+      "outbound": "direct",
+      "name": "spoti",
+      "switch": true,
+      "or": true,
+      "rule_set_build_in": [
+        "geosite:spotify",
+        "acl:Spotify"
+      ],
+      "process_name": [
+        "Spotify.exe"
+      ]
+    }
+  ]
+}

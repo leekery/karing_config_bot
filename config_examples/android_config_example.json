@@ -1,0 +1,156 @@
+{
+  "rules": [
+    {
+      "outbound": "block",
+      "name": "🛑 Adblock",
+      "switch": true,
+      "or": true,
+      "rule_set_build_in": [
+        "acl:BanAD",
+        "geosite:category-ads"
+      ]
+    },
+    {
+      "outbound": "block",
+      "name": "🍃 AdblockPlus",
+      "switch": true,
+      "or": true,
+      "rule_set_build_in": [
+        "acl:BanProgramAD",
+        "acl:BanADCompany"
+      ]
+    },
+    {
+      "outbound": "block",
+      "name": "🛑 malware",
+      "switch": true,
+      "or": true,
+      "rule_set_build_in": [
+        "geosite:malware",
+        "geoip:malware",
+        "geoip:phishing",
+        "geosite:phishing",
+        "geosite:cryptominers"
+      ]
+    },
+    {
+      "outbound": "currentSelected",
+      "name": "🎧 TikTok",
+      "switch": true,
+      "or": true,
+      "rule_set_build_in": [
+        "geosite:tiktok"
+      ]
+    },
+    {
+      "outbound": "currentSelected",
+      "name": "📸 Instagram",
+      "switch": true,
+      "or": true,
+      "rule_set_build_in": [
+        "geosite:instagram"
+      ]
+    },
+    {
+      "outbound": "currentSelected",
+      "name": "💬 OpenAI",
+      "switch": true,
+      "or": true,
+      "domain_suffix": [
+        "auth.openai.com",
+        "auth0.openai.com",
+        "authO.openai.com"
+      ],
+      "domain": [
+        "openai.com"
+      ],
+      "rule_set_build_in": [
+        "geoip:openai",
+        "geosite:openai"
+      ]
+    },
+    {
+      "outbound": "currentSelected",
+      "name": "proxy",
+      "switch": true,
+      "or": true,
+      "domain_suffix": [
+        ".deezer.com",
+        ".baidu.com",
+        ".fb.com",
+        ".meta.com"
+      ],
+      "domain": [
+        "x.com",
+        "ai.meta.com",
+        "gemini.google.com",
+        "deezer.com",
+        "grok.com",
+        "baidu.com",
+        "meta.com",
+        "fb.com",
+        "manhvaclub.net",
+        "clients4.google.com"
+      ],
+      "rule_set_build_in": [
+        "geosite:twitter",
+        "geoip:twitter",
+        "geosite:x",
+        "geosite:xai",
+        "geosite:google-gemini",
+        "acl:Gemini",
+        "geosite:notion"
+      ],
+      "package": [
+        "com.aloha.browser",
+        "com.openai.chatgpt",
+        "com.discord",
+        "com.google.android.apps.bard",
+        "com.instagram.android",
+        "com.kinopub",
+        "com.supercell.squad",
+        "app.revanced.android.youtube",
+        "com.twitter.android",
+        "com.vanced.android.youtube",
+        "com.google.android.youtube",
+        "com.google.android.googlequicksearchbox",
+        "com.anthropic.claude",
+        "ai.x.grok",
+        "com.instagram.lite",
+        "com.ivianuu.oneplusgestures",
+        "com.microsoft.copilot",
+        "com.supercell.clashroyale",
+        "com.swiftsoft.anixartd",
+        "com.facebook.stella",
+        "com.saveinsta.app.savevideo.saveclip"
+      ]
+    },
+    {
+      "outbound": "direct",
+      "name": "direct",
+      "switch": true,
+      "or": true,
+      "rule_set_build_in": [
+        "geosite:spotify",
+        "acl:Spotify"
+      ],
+      "package": [
+        "com.beatstars.mobile"
+      ]
+    },
+    {
+      "outbound": "direct",
+      "name": "Telegram",
+      "switch": true,
+      "or": true,
+      "rule_set_build_in": [
+        "geosite:telegram",
+        "geoip:telegram",
+        "acl:Telegram"
+      ],
+      "package": [
+        "org.telegram.messenger"
+      ]
+    }
+  ]
+}
